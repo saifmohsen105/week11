@@ -41,11 +41,13 @@ btmSubmit.addEventListener("click", function () {
 });
  async function getData() {
   if (inputSearch.value.length >= 3) {
+    try{
+      
     data = await (await fetch(`https:api.weatherapi.com/v1/forecast.json?key=1dcea41643a340b3ae1112851240212&q=${inputSearch.value}&days=3`)).json();
     display();
-    requect.addEventListener("error", function () {
-      console.log("error");
-    });
+    }catch(err){
+    console.log('The base is wrong');
+    }
   }
 }
 function display() {
