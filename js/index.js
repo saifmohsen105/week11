@@ -35,7 +35,7 @@ const days = [
   "Saturday",
 ];
 
-var requect = new XMLHttpRequest();
+
 btmSubmit.addEventListener("click", function () {
   getData();
 });
