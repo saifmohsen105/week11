@@ -41,16 +41,16 @@ btmSubmit.addEventListener("click", function () {
 });
 function getData() {
   if (inputSearch.value.length >= 3) {
-    requect.open(
-      "GET",
+    fetch(
       `https:api.weatherapi.com/v1/forecast.json?key=1dcea41643a340b3ae1112851240212&q=${inputSearch.value}&days=3`
-    );
-    requect.send();
-    requect.responseType = "json";
-    requect.addEventListener("load", function () {
-      data = requect.response;
-      display();
-    });
+    )
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (finalResponse) {
+        data= finalResponse;
+        display();
+      });
     requect.addEventListener("error", function () {
       console.log("error");
     });
