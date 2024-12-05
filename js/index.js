@@ -39,18 +39,10 @@ const days = [
 btmSubmit.addEventListener("click", function () {
   getData();
 });
-function getData() {
+ async function getData() {
   if (inputSearch.value.length >= 3) {
-    fetch(
-      `https:api.weatherapi.com/v1/forecast.json?key=1dcea41643a340b3ae1112851240212&q=${inputSearch.value}&days=3`
-    )
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (finalResponse) {
-        data= finalResponse;
-        display();
-      });
+    data = await (await fetch(`https:api.weatherapi.com/v1/forecast.json?key=1dcea41643a340b3ae1112851240212&q=${inputSearch.value}&days=3`)).json();
+    display();
     requect.addEventListener("error", function () {
       console.log("error");
     });
