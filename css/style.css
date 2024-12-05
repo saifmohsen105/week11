@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #1E202B;
+}
+
+form.search {
+  width: 50%;
+  background-color: #1e202b;
+  padding: 0.625rem;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  transform: translate(-50%,-50%);
+}
+
+header form > input {
+  background-color: transparent !important;
+  outline: 0;
+  color: white;
+}
+header > picture > img{
+  min-height: 300px;
+}
+
+header form button {
+  padding: 7px 40px;
+  border-radius: 25px;
+  border: none;
+  outline: 0;
+  background-color: #009ad8;
+  color: white;
+}
+.card-header{
+  background-color: #2D303D;
+}
+.fs-50{
+  font-size: 3.125rem;
+}
+.row{
+visibility: hidden;
+}

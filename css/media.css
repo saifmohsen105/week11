@@ -1,0 +1,16 @@
+@media (max-width:915px){
+    form{
+        width: 80%!important;
+    }
+    form input{
+        width: 100%!important;
+    }
+}
+@media (max-width:500px){
+    form{
+        width: 90%!important;
+    }
+    form input{
+        width: 100%!important;
+    }
+}
