@@ -54,6 +54,10 @@ function display() {
   var today = new Date();
   for (var i = 0; i < data.forecast.forecastday.length; i++) {
     day[i].innerHTML = days[today.getDay() + i];
+    switch (today.getDay() + i) {
+      case 7:
+        day[i].innerHTML = days[0];
+    }
     switch (i) {
       case 0:
         place.innerHTML = data.location.name;
